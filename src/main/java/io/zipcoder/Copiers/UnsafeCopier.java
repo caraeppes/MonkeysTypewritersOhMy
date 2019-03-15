@@ -1,7 +1,8 @@
 package io.zipcoder.Copiers;
 
+import java.util.NoSuchElementException;
 
-import io.zipcoder.Copiers.Copier;
+import static java.lang.Thread.sleep;
 
 public class UnsafeCopier extends Copier {
 
@@ -10,6 +11,13 @@ public class UnsafeCopier extends Copier {
     }
 
     public void run() {
-        makeCopy();
+        while (stringIterator.hasNext()) {
+            try {
+                sleep(10);
+                    copied += stringIterator.next() + " ";
+            } catch (InterruptedException ie){
+                ie.printStackTrace();
+            }
+        }
     }
 }

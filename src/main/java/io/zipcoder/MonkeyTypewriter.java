@@ -24,10 +24,10 @@ public class MonkeyTypewriter {
             "evil, in the superlative degree of comparison only.";
 
     public static void main(String[] args) {
-        unsafeCopierMonkeys();
         lockedCopierMonkeys();
         synchronizedCopierMonkeys();
         synchronizedBlockCopierMonkeys();
+        unsafeCopierMonkeys();
     }
 
     public static void unsafeCopierMonkeys(){
