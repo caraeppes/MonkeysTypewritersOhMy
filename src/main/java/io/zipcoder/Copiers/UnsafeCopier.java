@@ -1,8 +1,8 @@
-package io.zipcoder;
+package io.zipcoder.Copiers;
 
-/**
- * Modify the run function so that the monkeys each grab the next word and write it to the copy.
- */
+
+import io.zipcoder.Copiers.Copier;
+
 public class UnsafeCopier extends Copier {
 
     public UnsafeCopier(String toCopy) {
@@ -10,5 +10,6 @@ public class UnsafeCopier extends Copier {
     }
 
     public void run() {
+        makeCopy();
     }
 }
